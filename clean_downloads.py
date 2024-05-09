@@ -5,7 +5,7 @@ dl = 'C:\\Users\\b-san\\Downloads'
 
 for file in os.listdir(dl):
     print(file, end=' \n')
-    
+
 img_ext = {'dir':dl+'\\images',
            'exts':["jpg", "jpeg", "gif", "webp", "png", "svg"]}
 
@@ -22,7 +22,7 @@ exe_ext = {'dir':dl+'\\executables',
            'exts': ["exe", "bat", "msi"]}
 
 comp_ext = {'dir':dl+'\\compressed',
-            'exts': ["zip", "rar", "7z", "tar"]}
+            'exts': ["zip", "rar", "7z", "tar", "gz"]}
 
 conf_ext = {'dir':dl+'\\config',
             'exts': ["ini", "conf", "yaml", "json"]}
@@ -55,7 +55,7 @@ for file in os.listdir(dl):
         # the file extension matches the with one of the extensions on the lists
         
         # Optimization attempt
-        # Quite succesfull
+        # Quite succesfull!!
         for _list in dicts:
             if ext in _list['exts']:
                 os.rename(src=dl+"\\"+file, dst=_list['dir']+"\\"+file)
