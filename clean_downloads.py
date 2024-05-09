@@ -8,6 +8,7 @@ dl_docs = dl+'\\docfiles'
 dl_img = dl+'\\images'
 dl_video = dl+'\\video'
 dl_comp = dl+'\\compressed'
+dl_config = dl+'\\config'
 
 def if_exists(dir: str):
     # This function checks if a 'dir' exists on a path, if not it creates it
@@ -35,6 +36,7 @@ audio_ext = ["mp3", "ogg", "wav", "m4a"]
 video_ext = ["mp4", "mkv", "flv", "webm", "wmv", "m4p", "3gp", "mpg", "mpeg"]
 exe_ext = ["exe", "bat", "msi"]
 comp_ext = ["zip", "rar", "7z", "tar"]
+conf_ext = ["ini", "conf", "yaml", "json"]
 
 # Now we take a look at the whole download folder file by file to start moving and cleaning.
 for file in os.listdir(dl):
@@ -57,6 +59,8 @@ for file in os.listdir(dl):
             os.rename(src=dl+"\\"+file, dst=dl_exe+"\\"+file)
         elif ext in comp_ext:
             os.rename(src=dl+"\\"+file, dst=dl_comp+"\\"+file)
+        elif ext in conf_ext:
+            os.rename(src=dl+"\\"+file, dst=dl_config+"\\"+file)
         else:
             # You can either delete the remaining ones or just comment this last line and do it yourself in the end :)
             os.remove(dl+"\\"+file)
