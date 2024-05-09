@@ -21,12 +21,13 @@ def if_exists(dir: str):
 for file in os.listdir(dl):
     print(file, end=' \n')
 
-if_exists(dl_exe)   # For .exe and .inst kind of files
-if_exists(dl_audio) # For .mp3, .ogg, flac or any other sound file i have on the downloads folder
-if_exists(dl_docs)  # For any .doc, .pdf and document related files
-if_exists(dl_img)   # For .png, .jpg, .gif, and any other image file in the download folder
-if_exists(dl_video) # For any video source files like .mp4, .mkv or whatever else is there
-if_exists(dl_comp)  # For any rar, zip, 7z files.
+if_exists(dl_exe)    # For .exe and .inst kind of files
+if_exists(dl_audio)  # For .mp3, .ogg, flac or any other sound file i have on the downloads folder
+if_exists(dl_docs)   # For any .doc, .pdf and document related files
+if_exists(dl_img)    # For .png, .jpg, .gif, and any other image file in the download folder
+if_exists(dl_video)  # For any video source files like .mp4, .mkv or whatever else is there
+if_exists(dl_comp)   # For any rar, zip, 7z files.
+if_exists(dl_config) # For basic config files like .ini, .yaml, .conf, etc...
 
 # Here you can add more file extensions to the arrays to fit the files 
 # you would most likely want to move to the folders above
